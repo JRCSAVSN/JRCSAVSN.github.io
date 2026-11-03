@@ -1,0 +1,16 @@
+/*
+ * SITE PALETTE — start here to try a new permanent color scheme.
+ * All components (including the illustration) reference these six variables.
+ * You can also try colors interactively with the Palette button on the website.
+ * Changes made in that panel are stored in YOUR browser only; use "Copy CSS"
+ * and paste the result here when you want everyone to see your chosen palette.
+ */
+:root {
+  color-scheme: dark;
+  --bg: #0b1210;       /* Page background */
+  --surface: #14201b;  /* Cards / elevated panels */
+  --text: #eaf4ed;     /* Main foreground, headings */
+  --muted: #a2b8aa;    /* Secondary body text */
+  --accent: #a5f4a9;   /* Holographic green */
+  --border: #2a4236;   /* Separators / card outlines */
+}
