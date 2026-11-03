@@ -201,9 +201,12 @@
     <p class="panel-description">Try a preset or tune individual colors. Changes are previewed instantly and saved in this browser.</p>
     <span class="panel-label">Starting palettes</span>
     <div class="palette-presets" role="group" aria-label="Palette presets">
-      <button type="button" class="preset" data-preset="phosphor"><span class="preset-dot" style="--swatch:#a5f4a9;--swatch-bg:#0b1210"></span>Phosphor</button>
-      <button type="button" class="preset" data-preset="emerald"><span class="preset-dot" style="--swatch:#67e8c1;--swatch-bg:#081719"></span>Emerald</button>
-      <button type="button" class="preset" data-preset="sage"><span class="preset-dot" style="--swatch:#b8d7a2;--swatch-bg:#151916"></span>Sage</button>
+<!--      <button type="button" class="preset" data-preset="phosphor"><span class="preset-dot" style="&#45;&#45;swatch:#a5f4a9;&#45;&#45;swatch-bg:#0b1210"></span>Phosphor</button>-->
+<!--      <button type="button" class="preset" data-preset="emerald"><span class="preset-dot" style="&#45;&#45;swatch:#67e8c1;&#45;&#45;swatch-bg:#081719"></span>Emerald</button>-->
+<!--      <button type="button" class="preset" data-preset="sage"><span class="preset-dot" style="&#45;&#45;swatch:#b8d7a2;&#45;&#45;swatch-bg:#151916"></span>Sage</button>-->
+      <button type="button" class="preset" data-preset="lambda473"><span class="preset-dot" style="--swatch:#2a57df;--swatch-bg:#151916"></span>λ 473nm</button>
+      <button type="button" class="preset" data-preset="lambda532"><span class="preset-dot" style="--swatch:#68e8a6;--swatch-bg:#151916"></span>λ 532nm</button>
+      <button type="button" class="preset" data-preset="lambda660"><span class="preset-dot" style="--swatch:#c36060;--swatch-bg:#151916"></span>λ 660nm</button>
     </div>
     <span class="panel-label">Fine-tune colors</span>
     <div class="palette-fields">
@@ -215,7 +218,7 @@
       <div class="color-row"><label for="hex-border">Outlines</label><input class="color-chip" id="color-border" type="color" data-color="border" aria-label="Choose outline color"><input class="color-hex" id="hex-border" type="text" data-hex="border" maxlength="7" spellcheck="false" aria-label="Border hex color"></div>
     </div>
     <div class="palette-actions"><button type="button" class="palette-action copy" id="copy-palette">Copy CSS colors</button><button type="button" class="palette-action" id="reset-palette">Reset</button></div>
-    <p class="palette-feedback" id="palette-feedback" role="status" aria-live="polite">To publish a palette, paste the copied colors into <code>theme.css</code>.</p>
+    <p class="palette-feedback" id="palette-feedback" role="status" aria-live="polite">Try different color schemes!</p>
   </aside>
 </body>
 </html>
