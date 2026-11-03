@@ -78,3 +78,29 @@ Create a public GitHub repository named **`YOUR_GITHUB_USERNAME.github.io`**. Up
 Only files committed to GitHub get deployed; locally previewed palette choices are not published. Your GitHub Pages repository may be publicly visible, so do not include secrets or private documents.
 
 Official guide: https://docs.github.com/en/pages/quickstart
+
+## 4. Add publications
+
+The Publications section in `index.html` uses one `<article class="publication-row">` per paper. Duplicate an existing article within `<div class="publication-list">` and update the year, title, authors, venue, and resource links. New papers automatically use the same responsive styling and the colors in `theme.css`.
+
+Minimal entry to copy (replace the example text and URLs with verified publication details):
+
+```html
+<article class="publication-row" id="paper-unique-id">
+  <time class="publication-year" datetime="2027">2027</time>
+  <div class="publication-main">
+    <h3>Your paper title</h3>
+    <p class="publication-authors"><strong>Your name</strong>, Coauthor A, and Coauthor B.</p>
+    <p class="publication-venue"><em>Conference or Journal Name</em> · pp. 1–10</p>
+    <div class="publication-links" aria-label="Publication resources">
+      <a href="https://example.org/paper" target="_blank" rel="noopener noreferrer">Paper <span aria-hidden="true">↗</span></a>
+      <a href="https://example.org/preprint" target="_blank" rel="noopener noreferrer">arXiv <span aria-hidden="true">↗</span></a>
+      <a href="https://github.com/your-account/project" target="_blank" rel="noopener noreferrer">Code <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</article>
+```
+
+Remove resource links that are not available. For an expandable BibTeX block, copy the `<details class="publication-citation">` element from the NSDD entry and replace its contents with the publisher's BibTeX citation. Keep the `id` unique for each entry. The list intentionally has no publication images, summaries, or external dependencies so it stays easy to maintain.
+
+**NSDD citation sources:** [IEEE Xplore](https://ieeexplore.ieee.org/document/11668888/), [arXiv](https://arxiv.org/abs/2511.12024), and [project repository](https://github.com/JRCSAVSN/NullSpaceDiffusionDistillation).
