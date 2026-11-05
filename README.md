@@ -104,3 +104,15 @@ Minimal entry to copy (replace the example text and URLs with verified publicati
 Remove resource links that are not available. For an expandable BibTeX block, copy the `<details class="publication-citation">` element from the NSDD entry and replace its contents with the publisher's BibTeX citation. Keep the `id` unique for each entry. The list intentionally has no publication images, summaries, or external dependencies so it stays easy to maintain.
 
 **NSDD citation sources:** [IEEE Xplore](https://ieeexplore.ieee.org/document/11668888/), [arXiv](https://arxiv.org/abs/2511.12024), and [project repository](https://github.com/JRCSAVSN/NullSpaceDiffusionDistillation).
+
+## Full publication history and homepage link
+
+`index.html` now ends the selected-publications section with a **View full publication history** button. It links to `publications.html` using a relative URL that also works when hosted under a GitHub Pages project path.
+
+`publications.html` provides **Journals**, **Peer-reviewed conferences**, and **Invited talks & presentations** sections, with the same header, palette selector, publication-row styles, and footer as the homepage. The three papers already listed on the homepage are copied into their appropriate sections; they are starting entries, **not an exhaustive publication history**.
+
+To add another journal or conference publication, duplicate an `<article class="publication-row">` within the corresponding `<div class="publication-list">`, update its unique `id`, year, title, author list, venue, resource links and optional BibTeX, and maintain reverse chronological order.
+
+To add a talk, replace the `history-empty` placeholder with publication rows using the talk's verified title, presenter, event, and date/location. BibTeX and paper links are optional for talks.
+
+Test locally with `python -m http.server 8000` and visit `http://localhost:8000/publications.html` or click the link on the homepage.
