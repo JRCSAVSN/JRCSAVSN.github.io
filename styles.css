@@ -182,6 +182,17 @@ h1,h2,h3,h4,p { margin-top: 0; }
 .history-section { background: var(--bg); }
 .history-section-alt { background: var(--section-alt); border-block: 1px solid var(--border); }
 .history-section .section-heading { margin-bottom: 31px; }
+/* Compact, palette-aware category keyword for non-publication research activities. */
+.presentation-type {
+  display: inline-block;
+  margin-right: 5px;
+  color: var(--accent);
+  font-size: 0.72em;
+  font-weight: 760;
+  letter-spacing: .015em;
+  white-space: nowrap;
+  vertical-align: baseline;
+}
 .history-empty { margin: 0; padding: 30px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); color: var(--muted); font-size: 13px; }
 .primary-nav a[aria-current="page"] { color: var(--accent); }
 @media (max-width: 760px) {
