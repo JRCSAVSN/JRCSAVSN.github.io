@@ -20,9 +20,9 @@ const PALETTES = {
   phosphor: { bg: '#0b1210', surface: '#14201b', text: '#eaf4ed', muted: '#a2b8aa', accent: '#a5f4a9', border: '#2a4236' },
   emerald:  { bg: '#081719', surface: '#10252a', text: '#e5f8f5', muted: '#97bdba', accent: '#67e8c1', border: '#294747' },
   sage:     { bg: '#151916', surface: '#202922', text: '#f0f4e9', muted: '#adbba9', accent: '#b8d7a2', border: '#3b493d' },
-  lambda473: { bg: '#081719', surface: '#10252a', text: '#e5f8f5', muted: '#97bdba', accent: '#2a57df', border: '#294747' },
+  lambda473: { bg: '#081719', surface: '#10252a', text: '#e5f8f5', muted: '#97bdba', accent: '#628bff', border: '#294747' },
   lambda532: { bg: '#081719', surface: '#10252a', text: '#e5f8f5', muted: '#97bdba', accent: '#68e8a6', border: '#294747' },
-  lambda660: { bg: '#081719', surface: '#10252a', text: '#e5f8f5', muted: '#97bdba', accent: '#c36060', border: '#294747' },
+  lambda660: { bg: '#081719', surface: '#10252a', text: '#e5f8f5', muted: '#97bdba', accent: '#dd8585', border: '#294747' },
 
 };
 const root = document.documentElement;
