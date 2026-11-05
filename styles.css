@@ -140,8 +140,17 @@ h1,h2,h3,h4,p { margin-top: 0; }
 .contact-section h2 { font-size: clamp(34px, 4.5vw, 55px); letter-spacing: -.055em; max-width: 590px; line-height: 1.12; margin: 17px 0 20px; }
 .contact-section h2 em { font-family: Georgia, serif; color: var(--accent); font-weight: 400; }
 .contact-section p { color: var(--muted); line-height: 1.8; font-size: 13px; max-width: 490px; margin: 0; }
-.contact-action { max-width: 290px; }
-.contact-button { background: var(--accent); color: var(--bg); white-space: nowrap; }
+.contact-action { width: min(100%, 340px);flex-shrink: 0; }
+
+.contact-button {  min-width: 0;  width: 100%;  justify-content: flex-start;  gap: 10px;  padding: 12px 14px;  white-space: nowrap;}
+.contact-icon {  width: 18px;  height: 18px;  flex-shrink: 0;}
+.contact-arrow {  margin-left: auto;}
+/* Primary button */
+.contact-email {  grid-column: 1 / -1;  background: var(--accent);  color: var(--bg);  border: 1px solid var(--accent);}
+/* Secondary buttons */
+.contact-secondary {  background: var(--surface);  color: var(--text);  border: 1px solid var(--border);}
+.contact-secondary:hover {  border-color: var(--accent-line);  background: var(--accent-soft);}
+.contact-links {  display: grid;  grid-template-columns: repeat(2, minmax(0, 1fr));  gap: 10px;}
 .contact-draft-note { margin-top: 15px !important; font-size: 11px !important; }
 .site-footer { padding: 30px 0; background: var(--surface-muted); border-top: 1px solid var(--border); }
 .footer-layout, .footer-layout > div { display: flex; align-items: center; gap: 16px; }
@@ -149,6 +158,11 @@ h1,h2,h3,h4,p { margin-top: 0; }
 .footer-name { color: var(--text); font-size: 19px; font-weight: 800; letter-spacing: -.08em; }
 .footer-name span, .footer-layout a { color: var(--accent); }
 .footer-layout a { font-weight: 700; }
+.contact-wemail {  margin-top: 26px;  padding: 14px 18px;  border-left: 2px solid var(--accent);  background: var(--surface-muted);  border-radius: 0 6px 6px 0;}
+.contact-wemail-label {  display: block;  color: var(--muted);  font-size: 10px;  font-weight: 700;  letter-spacing: 0.1em;  margin-bottom: 7px;}
+.contact-wemail-address {  display: block;  color: var(--text);  font-size: 15px;  font-weight: 550;  line-height: 1.6;  overflow-wrap: anywhere;}
+.email-highlight {  color: var(--accent);  font-weight: 700;}
+
 
 /* Color playground: a useful temporary design tool, not a publishing dependency. */
 .palette-panel[hidden] { display: none; }
@@ -206,7 +220,7 @@ h1,h2,h3,h4,p { margin-top: 0; }
   .compact-heading { margin-bottom: 39px; }
   .contact-section { padding-block: 72px; }
   .contact-layout { flex-direction: column; align-items: start; gap: 29px; }
-  .contact-action { max-width: 100%; }
+  .contact-action { width: min(100%, 340px);flex-shrink: 0; }
   .footer-layout { flex-wrap: wrap; gap: 18px; }
   .palette-panel { top: 75px; right: 16px; max-height: calc(100dvh - 90px); }
 }
