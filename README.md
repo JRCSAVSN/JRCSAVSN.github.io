@@ -116,3 +116,21 @@ To add another journal or conference publication, duplicate an `<article class="
 To add a talk, replace the `history-empty` placeholder with publication rows using the talk's verified title, presenter, event, and date/location. BibTeX and paper links are optional for talks.
 
 Test locally with `python -m http.server 8000` and visit `http://localhost:8000/publications.html` or click the link on the homepage.
+
+## Talks, non-peer-reviewed conference presentations, and live demos
+
+The third section of `publications.html` (anchor `#talks`) is now titled **Talks, presentations & demos**. Each entry uses the same two-column `publication-row` layout as the papers, with an accent-colored type keyword directly before the title:
+
+- `[talk]` — invited webinars or talks
+- `[presentation]` — non-peer-reviewed conference presentations and other presentation sessions
+- `[poster]` — workshop/poster presentations
+- `[demo]` — live technology demonstrations
+
+To add an entry, duplicate an existing `<article class="publication-row">` within this section and change the `id`, year, keyword, title, author/presenter or team credit, venue/date, and any relevant links. Remove the `publication-links` div if there is no verified public event link. Keep the entries in newest-first order. Colors follow `--accent` from the existing Palette controls.
+
+**Source notes / verification:**
+- 2026 Osaka University Co-Creation Day @ EXPOCITY: public lensless-camera exhibit, 26 September 2026, based on the University's official event page. The listing credits the participating research team rather than naming an individual leader.
+- ICASSP 2024: one verified Show & Tell demo (DEMO-2A.1), and one separate non-peer-reviewed SPS Journal Presentation (CI-P2.5).
+- IEEE Signal Processing Society webinar: official resource records **28 January 2025**, while the older Google Sites page listed January 2024; the official date is used.
+- 2025 IDW presentation and 2023 DHIP poster/Student Presentation Award are drawn from the previous Google Sites record and corroborating event/proceedings pages.
+- This section is a curated list of identifiable talks, posters, presentations and demos, not necessarily every informal presentation.
