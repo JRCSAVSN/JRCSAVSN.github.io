@@ -4,13 +4,13 @@ A minimal, dark, holography-inspired website built with **HTML, CSS, and JavaScr
 
 ## 1. Preview it without publishing
 
-Extract the ZIP, open a terminal in the folder containing `index.html`, and run:
+Extract the ZIP, open a terminal in the folder containing `../index.html`, and run:
 
 ```bash
 python -m http.server 8000
 ```
 
-Open **http://localhost:8000** in Chrome, Edge, or Firefox. Stop the server with `Ctrl+C`. You can also double-click `index.html`, but the local server makes browser testing more reliable.
+Open **http://localhost:8000** in Chrome, Edge, or Firefox. Stop the server with `Ctrl+C`. You can also double-click `../index.html`, but the local server makes browser testing more reliable.
 
 In Chrome/Edge, press **F12**, then **Ctrl+Shift+M** to simulate different mobile/tablet sizes.
 
@@ -24,11 +24,11 @@ Click **Palette** in the website's top right corner. Choose Phosphor, Emerald, o
 
 The changes are saved in **your browser's localStorage only**. They are **not** written to your files or published automatically.
 
-When you like a palette, click **Copy CSS colors**. Open `theme.css` and replace its `:root { ... }` color declarations with the copied block. (Keep the rest of the file or its comments if you like.) Reload the page. If your browser still shows an old palette, click **Reset** in the Palette panel to see the actual colors from `theme.css`.
+When you like a palette, click **Copy CSS colors**. Open `../theme.css` and replace its `:root { ... }` color declarations with the copied block. (Keep the rest of the file or its comments if you like.) Reload the page. If your browser still shows an old palette, click **Reset** in the Palette panel to see the actual colors from `theme.css`.
 
 ### Method B: Directly in CSS
 
-All six essential colors are in **`theme.css`**:
+All six essential colors are in **`../theme.css`**:
 
 ```css
 :root {
@@ -44,23 +44,23 @@ All six essential colors are in **`theme.css`**:
 
 Changing a variable in this file changes all elements that use it, including the inline SVG illustration. Secondary tones, glow, and tints derive automatically from these six colors using CSS `color-mix()`.
 
-Preset combinations are inside `script.js`, in `PALETTES`; you can add new presets if you want. `styles.css` contains the layout and component styles and normally does not require edits for color experiments.
+Preset combinations are inside `../script.js`, in `PALETTES`; you can add new presets if you want. `styles.css` contains the layout and component styles and normally does not require edits for color experiments.
 
 **Accessibility tip:** When trying more extreme palettes, keep good contrast between the background and `--text`/`--muted`; and between the accent and the dark background. Light accents are especially effective for this design.
 
 ## 3. Update the introduction
 
-In `index.html`, look for `class="hero-content"` to edit your name, affiliation, research description, and the four research-interest labels. The hero illustration immediately follows in `class="hero-graphic"`. Text sizing, spacing, and the keyword style are defined in the `/* Hero */` section of `styles.css`. The color variables remain in `theme.css`, including the highlighted words.
+In `../index.html`, look for `class="hero-content"` to edit your name, affiliation, research description, and the four research-interest labels. The hero illustration immediately follows in `class="hero-graphic"`. Text sizing, spacing, and the keyword style are defined in the `/* Hero */` section of `styles.css`. The color variables remain in `theme.css`, including the highlighted words.
 
 ## 4. What each file does
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Page sections, copy, navigation, color-editor UI, inline SVG visual |
-| `theme.css` | **Six editable global color values** |
-| `styles.css` | Layout, typography, visual effects, responsive rules |
-| `script.js` | Color editor, palette presets, mobile navigation, footer year |
-| `assets/favicon.svg` | Browser-tab icon |
+| `../index.html` | Page sections, copy, navigation, color-editor UI, inline SVG visual |
+| `../theme.css` | **Six editable global color values** |
+| `../styles.css` | Layout, typography, visual effects, responsive rules |
+| `../script.js` | Color editor, palette presets, mobile navigation, footer year |
+| `../assets/favicon.svg` | Browser-tab icon |
 | `.nojekyll` | Simple GitHub Pages publishing compatibility |
 
 ## 5. Content to finish before publishing
@@ -81,7 +81,7 @@ Official guide: https://docs.github.com/en/pages/quickstart
 
 ## 4. Add publications
 
-The Publications section in `index.html` uses one `<article class="publication-row">` per paper. Duplicate an existing article within `<div class="publication-list">` and update the year, title, authors, venue, and resource links. New papers automatically use the same responsive styling and the colors in `theme.css`.
+The Publications section in `../index.html` uses one `<article class="publication-row">` per paper. Duplicate an existing article within `<div class="publication-list">` and update the year, title, authors, venue, and resource links. New papers automatically use the same responsive styling and the colors in `theme.css`.
 
 Minimal entry to copy (replace the example text and URLs with verified publication details):
 
@@ -107,9 +107,9 @@ Remove resource links that are not available. For an expandable BibTeX block, co
 
 ## Full publication history and homepage link
 
-`index.html` now ends the selected-publications section with a **View full publication history** button. It links to `publications.html` using a relative URL that also works when hosted under a GitHub Pages project path.
+`../index.html` now ends the selected-publications section with a **View full publication history** button. It links to `publications.html` using a relative URL that also works when hosted under a GitHub Pages project path.
 
-`publications.html` provides **Journals**, **Peer-reviewed conferences**, and **Invited talks & presentations** sections, with the same header, palette selector, publication-row styles, and footer as the homepage. The three papers already listed on the homepage are copied into their appropriate sections; they are starting entries, **not an exhaustive publication history**.
+`../publications.html` provides **Journals**, **Peer-reviewed conferences**, and **Invited talks & presentations** sections, with the same header, palette selector, publication-row styles, and footer as the homepage. The three papers already listed on the homepage are copied into their appropriate sections; they are starting entries, **not an exhaustive publication history**.
 
 To add another journal or conference publication, duplicate an `<article class="publication-row">` within the corresponding `<div class="publication-list">`, update its unique `id`, year, title, author list, venue, resource links and optional BibTeX, and maintain reverse chronological order.
 
@@ -119,7 +119,7 @@ Test locally with `python -m http.server 8000` and visit `http://localhost:8000/
 
 ## Talks, non-peer-reviewed conference presentations, and live demos
 
-The third section of `publications.html` (anchor `#talks`) is now titled **Talks, presentations & demos**. Each entry uses the same two-column `publication-row` layout as the papers, with an accent-colored type keyword directly before the title:
+The third section of `../publications.html` (anchor `#talks`) is now titled **Talks, presentations & demos**. Each entry uses the same two-column `publication-row` layout as the papers, with an accent-colored type keyword directly before the title:
 
 - `[talk]` — invited webinars or talks
 - `[presentation]` — non-peer-reviewed conference presentations and other presentation sessions
