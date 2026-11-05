@@ -164,6 +164,33 @@ h1,h2,h3,h4,p { margin-top: 0; }
 .email-highlight {  color: var(--accent);  font-weight: 700;}
 
 
+
+/* Link from the selected homepage highlights to the full publication history. */
+.publication-more { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; margin-top: 26px; }
+.publication-more p { color: var(--muted); font-size: 13px; line-height: 1.75; margin: 0; max-width: 560px; }
+.publication-more-link { background: var(--surface-muted); color: var(--accent); border: 1px solid var(--accent-line); gap: 20px; white-space: nowrap; }
+.publication-more-link:hover { background: var(--accent-soft); border-color: var(--accent); }
+
+/* Full publication history — reuses the publication rows and global color palette. */
+.history-intro { padding-block: 78px 67px; background: var(--bg); border-bottom: 1px solid var(--border); }
+.history-intro h1 { font-size: clamp(32px, 4vw, 48px); font-weight: 740; letter-spacing: -.055em; line-height: 1.16; margin: 14px 0 18px; }
+.history-intro p { color: var(--muted); font-size: 14px; line-height: 1.85; max-width: 690px; margin: 0; }
+.history-jump-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.history-jump-links a { padding: 9px 13px; background: var(--surface-muted); border: 1px solid var(--border); border-radius: 7px; color: var(--text); font-size: 12px; font-weight: 650; transition: background-color .2s, border-color .2s; }
+.history-jump-links a:hover { background: var(--accent-soft); border-color: var(--accent-line); }
+.history-jump-links span { color: var(--accent); margin-left: 5px; }
+.history-section { background: var(--bg); }
+.history-section-alt { background: var(--section-alt); border-block: 1px solid var(--border); }
+.history-section .section-heading { margin-bottom: 31px; }
+.history-empty { margin: 0; padding: 30px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); color: var(--muted); font-size: 13px; }
+.primary-nav a[aria-current="page"] { color: var(--accent); }
+@media (max-width: 760px) {
+  .history-intro { padding-block: 55px 48px; }
+  .history-jump-links { margin-top: 22px; }
+  .publication-more { align-items: stretch; }
+  .publication-more-link { justify-content: space-between; }
+}
+
 /* Color playground: a useful temporary design tool, not a publishing dependency. */
 .palette-panel[hidden] { display: none; }
 .palette-panel { position: fixed; z-index: 40; top: 88px; right: max(25px, calc((100vw - 1160px) / 2)); width: min(358px, calc(100vw - 32px)); max-height: calc(100dvh - 103px); overflow: auto; background: var(--surface); color: var(--text); border: 1px solid var(--border); box-shadow: 0 25px 70px rgb(0 0 0 / .45); border-radius: 15px; padding: 23px; }
