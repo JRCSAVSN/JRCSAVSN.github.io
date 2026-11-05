@@ -99,31 +99,31 @@ document.querySelectorAll('[data-hex]').forEach(input => {
     }
   });
 });
-document.getElementById('reset-palette').addEventListener('click', () => {
-  palette = { ...defaultPalette };
-  renderPalette();
-  savePalette();
-  feedback.textContent = 'Back to the default colors in theme.css.';
-});
-document.getElementById('copy-palette').addEventListener('click', async () => {
-  const css = ':root {\n  color-scheme: dark;\n' + COLOR_KEYS.map(key => `  --${key}: ${palette[key]};`).join('\n') + '\n}';
-  try {
-    if (navigator.clipboard && window.isSecureContext) {
-      await navigator.clipboard.writeText(css);
-    } else {
-      // Fallback for users opening index.html directly without localhost.
-      const field = document.createElement('textarea');
-      field.value = css;
-      field.style.position = 'fixed';
-      field.style.left = '-9999px';
-      document.body.appendChild(field);
-      field.select();
-      const ok = document.execCommand('copy');
-      field.remove();
-      if (!ok) throw new Error('Clipboard unavailable');
-    }
-    feedback.textContent = 'Copied! Replace the :root block in theme.css with these colors.';
-  } catch {
-    feedback.textContent = 'Clipboard access is blocked. Open theme.css and enter the six hex colors manually.';
-  }
-});
+// document.getElementById('reset-palette').addEventListener('click', () => {
+//   palette = { ...defaultPalette };
+//   renderPalette();
+//   savePalette();
+//   feedback.textContent = 'Back to the default colors in theme.css.';
+// });
+// document.getElementById('copy-palette').addEventListener('click', async () => {
+//   const css = ':root {\n  color-scheme: dark;\n' + COLOR_KEYS.map(key => `  --${key}: ${palette[key]};`).join('\n') + '\n}';
+//   try {
+//     if (navigator.clipboard && window.isSecureContext) {
+//       await navigator.clipboard.writeText(css);
+//     } else {
+//       // Fallback for users opening index.html directly without localhost.
+//       const field = document.createElement('textarea');
+//       field.value = css;
+//       field.style.position = 'fixed';
+//       field.style.left = '-9999px';
+//       document.body.appendChild(field);
+//       field.select();
+//       const ok = document.execCommand('copy');
+//       field.remove();
+//       if (!ok) throw new Error('Clipboard unavailable');
+//     }
+//     feedback.textContent = 'Copied! Replace the :root block in theme.css with these colors.';
+//   } catch {
+//     feedback.textContent = 'Clipboard access is blocked. Open theme.css and enter the six hex colors manually.';
+//   }
+// });
