@@ -11,6 +11,6 @@
   --surface: #14201b;  /* Cards / elevated panels */
   --text: #eaf4ed;     /* Main foreground, headings */
   --muted: #a2b8aa;    /* Secondary body text */
-  --accent: #a5f4a9;   /* Holographic green */
+  --accent: #68e8a6;   /* Holographic green (lambda 532nm style) */
   --border: #2a4236;   /* Separators / card outlines */
 }
